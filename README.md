@@ -6,6 +6,12 @@
 
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
+**Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
+&nbsp;·&nbsp; **Download:** [v1.0 — index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
+
+*The hosted version streams the same embedded payload as the download; the downloaded
+file is identical and works fully offline.*
+
 The map covers **63.1 × 46.3 km** of real terrain, from the Three Gorges Dam in the west to Yichang Sanxia Airport in the east, with the Yangtze cutting through the middle.
 
 ---
@@ -46,9 +52,19 @@ Six independent toggles: **landmark labels, graticule, contour lines, relief sha
 
 ## Quick start
 
-1. Download `index.html` (or `yichang-3d-standalone.html`) — it is the whole program.
+**Option 1 — open it right now, nothing to install**
+
+<https://radiosky-bilibili.github.io/yichang-3d/>
+
+Hosted with GitHub Pages straight from the `main` branch. Give it a few seconds on the first
+visit: the page carries its own 31 MB of imagery and elevation data.
+
+**Option 2 — download it and keep it offline**
+
+1. Grab `index.html` from the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
+   (31.5 MB, one file, the entire program). Older builds are under [all releases](../../releases).
 2. Open it:
-   - **iPhone / iPad** — save it to *Files*, tap it, or serve it locally and open the URL in Safari.
+   - **iPhone / iPad** — save it to *Files* and tap it.
    - **Desktop** — just double-click it.
 3. That's it. Airplane mode is fine — the file never talks to the network.
 
