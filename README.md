@@ -6,10 +6,11 @@
 
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
-**Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/> — that page *is* the map, it starts loading straight away.
-&nbsp;·&nbsp; **Download:** [v1.0 — one 31.5 MB HTML file](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/map.html)
+**Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
+&nbsp;·&nbsp; **Download:** [v1.0 — index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
 
-*Hosted page and download carry the same embedded payload; the downloaded file works fully offline.*
+*The hosted version streams the same embedded payload as the download; the downloaded
+file is identical and works fully offline.*
 
 The map covers **63.1 × 46.3 km** of real terrain, from the Three Gorges Dam in the west to Yichang Sanxia Airport in the east, with the Yangtze cutting through the middle.
 
@@ -55,37 +56,17 @@ Six independent toggles: **landmark labels, graticule, contour lines, relief sha
 
 <https://radiosky-bilibili.github.io/yichang-3d/>
 
-That URL *is* the map — `index.html` in this repository, served by GitHub Pages straight from
-the `main` branch. Give it a few seconds on the first visit: the page carries its own 31 MB of
-imagery and elevation data, and the browser has to parse it before the first frame.
+Hosted with GitHub Pages straight from the `main` branch. Give it a few seconds on the first
+visit: the page carries its own 31 MB of imagery and elevation data.
 
 **Option 2 — download it and keep it offline**
 
-1. Grab the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
-   (31.5 MB, one file, the entire program) — the attachment is named `map.html`, and it is the
-   same application as `index.html` in this repository. Older builds are under
-   [all releases](../../releases).
-2. Open it directly:
+1. Grab `index.html` from the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
+   (31.5 MB, one file, the entire program). Older builds are under [all releases](../../releases).
+2. Open it:
    - **iPhone / iPad** — save it to *Files* and tap it.
    - **Desktop** — just double-click it.
 3. That's it. Airplane mode is fine — the file never talks to the network.
-
-### Exporting a clean screenshot (lossless)
-
-The application carries a small helper, `window.snapPNG()`, that dumps the current view
-straight out of the WebGL canvas as a **PNG**. That matters because
-`canvas.toBlob("image/jpeg")` is hard-wired to **4:2:0 chroma subsampling** in
-WebKit and Chromium — whatever quality you ask for — and 4:2:0 puts coloured fringes
-on thin text once the image is scaled. PNG is lossless and has no subsampling, so:
-export a PNG, then convert offline to JPEG with `subsampling=0` (4:4:4) if you need
-JPEG. The landmark markers are HTML, not WebGL, so the helper re-draws them onto the
-canvas from their computed styles — no `html2canvas` or any other library.
-
-```js
-// in the browser console, with the map open
-await snapPNG({ download: "yichang.png" });                              // download a PNG
-await snapPNG({ endpoint: "http://127.0.0.1:8765/__snap?name=a.png" });  // POST it to a local server
-```
 
 **Requirements:** any browser with WebGL 2 (Safari 15+, Chrome, Edge, Firefox). It runs happily on a phone; "Fine" terrain mode looks best and costs the most.
 
@@ -197,10 +178,9 @@ The project is provided **"as is", without warranty of any kind**, express or im
 ## Repository layout
 
 ```
-index.html                  the entire application — one self-contained 31 MB file,
-                            also served as the GitHub Pages entry point
-screenshot-satellite.jpg    screenshots used by this README
-screenshot-relief.jpg
+index.html                  the entire application — one self-contained file
+screenshot-satellite.jpg    satellite view (above)
+screenshot-relief.jpg       shaded relief view (above)
 README.md                   this file
 LICENSE                     optional — see the copyright section above
 ```
