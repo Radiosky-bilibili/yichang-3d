@@ -7,7 +7,7 @@
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
 **Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
-&nbsp;·&nbsp; **Download:** [v1.0 — index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
+&nbsp;·&nbsp; **Download:** [v1.0 — map.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/map.html)
 
 *The hosted version streams the same embedded payload as the download; the downloaded
 file is identical and works fully offline.*
@@ -56,14 +56,15 @@ Six independent toggles: **landmark labels, graticule, contour lines, relief sha
 
 <https://radiosky-bilibili.github.io/yichang-3d/>
 
-Hosted with GitHub Pages straight from the `main` branch. Give it a few seconds on the first
-visit: the page carries its own 31 MB of imagery and elevation data.
+The hosted entry page is a light landing page; press **Launch the map** and `map.html` takes
+over. Give the map a few seconds on the first visit — it carries its own 31 MB of imagery and
+elevation data. (Hosted with GitHub Pages straight from the `main` branch.)
 
 **Option 2 — download it and keep it offline**
 
-1. Grab `index.html` from the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
+1. Grab `map.html` from the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
    (31.5 MB, one file, the entire program). Older builds are under [all releases](../../releases).
-2. Open it:
+2. Open it directly:
    - **iPhone / iPad** — save it to *Files* and tap it.
    - **Desktop** — just double-click it.
 3. That's it. Airplane mode is fine — the file never talks to the network.
@@ -178,9 +179,13 @@ The project is provided **"as is", without warranty of any kind**, express or im
 ## Repository layout
 
 ```
-index.html                  the entire application — one self-contained file
-screenshot-satellite.jpg    satellite view (above)
-screenshot-relief.jpg       shaded relief view (above)
+index.html                  landing page served by GitHub Pages (a few KB)
+map.html                    the entire application — one self-contained 31 MB file
+hero-band.jpg               landing hero image
+thumb-satellite.jpg         landing thumbnails (satellite / shaded relief)
+thumb-relief-view.jpg
+screenshot-satellite.jpg    screenshots used by this README
+screenshot-relief.jpg
 README.md                   this file
 LICENSE                     optional — see the copyright section above
 ```
