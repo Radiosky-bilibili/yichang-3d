@@ -2,7 +2,7 @@
 
 **A single-file, offline 3D map of the Yangtze valley around Yichang (Hubei, China), running entirely in the browser.**
 
-![Yichang 3D map — satellite view](screenshot-satellite.jpg)
+![Yichang 3D map — satellite view of the Three Gorges](screenshot-overview.jpg)
 
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
@@ -26,12 +26,16 @@ The map covers **63.1 × 46.3 km** of real terrain, from the Three Gorges Dam in
 - **Guided tour / auto-rotate / top view** buttons: let the camera drift around the map by itself, or cycle landmark to landmark every few seconds.
 - **A compass, a live scale bar, an FPS readout**, graticule (lat/lon grid) and optional contour lines.
 
+<img src="screenshot-landmark.jpg" width="420" alt="Tapping a landmark opens a card with its elevation, coordinates and a short description">
+
 ### 2. Fly a virtual paper plane
 
 - A folded paper plane, built as geometry (wide flat wing on top, narrow V tail below).
 - Drag anywhere on the screen to steer — left/right to bank and turn, up/down to pitch. Two throttle buttons on the right.
 - Flight HUD: **speed (km/h), altitude (m), heading (°), height above ground** and a throttle bar.
 - The world wakes up when you fly: a soft shadow under the plane, volumetric cloud puffs you can climb over and fly through, a low-altitude haze layer that fades as you gain height, and mountain mist that sits thick in the valleys and thin on the ridges.
+
+<img src="screenshot-flight.jpg" width="420" alt="Flying the paper plane: the HUD shows speed, altitude, heading and height above ground">
 
 ### 3. Plenty of things to tune
 
@@ -47,6 +51,8 @@ The settings panel exposes the whole look of the map:
 | Terrain mesh resolution | 512 / **768** / 1024 vertices per side | 768 |
 
 Six independent toggles: **landmark labels, graticule, contour lines, relief shading, mountain mist, ground shadow.** Moving the sun slider relights the entire terrain, the sky and the fog colour in real time — no rebuild, no reload.
+
+<img src="screenshot-settings.jpg" width="420" alt="The settings panel: terrain exaggeration, sun azimuth, sun elevation, fog density, label size, mesh resolution and six independent toggles">
 
 ---
 
@@ -69,8 +75,6 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 3. That's it. Airplane mode is fine — the file never talks to the network.
 
 **Requirements:** any browser with WebGL 2 (Safari 15+, Chrome, Edge, Firefox). It runs happily on a phone; "Fine" terrain mode looks best and costs the most.
-
-![Yichang 3D map — shaded relief](screenshot-relief.jpg)
 
 ---
 
@@ -178,11 +182,13 @@ The project is provided **"as is", without warranty of any kind**, express or im
 ## Repository layout
 
 ```
-index.html                  the entire application — one self-contained file
-screenshot-satellite.jpg    satellite view (above)
-screenshot-relief.jpg       shaded relief view (above)
-README.md                   this file
-LICENSE                     optional — see the copyright section above
+index.html                    the entire application — one self-contained file
+screenshot-overview.jpg       satellite overview of the map (above)
+screenshot-landmark.jpg       a landmark card
+screenshot-flight.jpg         flying the paper plane
+screenshot-settings.jpg       the settings panel
+README.md                     this file
+LICENSE                       optional — see the copyright section above
 ```
 
 ---
