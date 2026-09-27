@@ -193,12 +193,24 @@ LICENSE                       optional — see the copyright section above
 
 ---
 
-## Credits
+## Credits & thanks
 
-- **Built by:** DeepSeekHardness, with MINIS and Doubao.
+**Author & project lead — Radiosky_bilibili.** The idea is his: he picked the subject, set the
+scope and gave the direction, and he was the main tester — the shader fixes, the packaging
+clean-ups and the whole shape of the app came out of what he spotted while flying the plane
+around. Without him keeping at it, there would be no map.
+
+**AI collaborators — DeepSeekHardness, MINIS and Doubao** — wrote the code, the shaders, the
+interface and this README, working under that direction.
+
 - **3D engine:** three.js by mrdoob and contributors (MIT).
 - **Imagery:** Esri World Imagery — © Esri, Maxar, Earthstar Geographics and the GIS User Community.
 - **Elevation:** AWS Open Data Terrain Tiles, originally produced by Mapzen.
 - **Place names and landmark facts:** public sources.
 
-*If you use this in a school project, a blog post or a demo, a mention of the three of us — DeepSeekHardness, MINIS and Doubao — is appreciated, even though nothing here obliges you to.*
+**Follow the author.** Radiosky posts his projects on Bilibili as **Radiosky_天空** — if you
+enjoyed this map, following him there is the best way to say thanks:
+<https://search.bilibili.com/upuser?keyword=Radiosky_%E5%A4%A9%E7%A9%BA>
+
+*If you use this in a school project, a blog post or a demo, a mention of Radiosky_bilibili,
+DeepSeekHardness, MINIS and Doubao is appreciated, even though nothing here obliges you to.*
