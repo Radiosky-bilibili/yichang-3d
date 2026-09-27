@@ -9,10 +9,11 @@
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
 **Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
-&nbsp;·&nbsp; **Download:** [index.html, 31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
+&nbsp;·&nbsp; **Download:** [v1.2 **preview** — index.html, 31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/index.html) — adds the new FPV river flight; still being tested
+&nbsp;·&nbsp; **Stable:** [v1.1 — index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.1/index.html) — the same map without the FPV flight
 
-*The hosted version streams the same embedded payload as the download; the downloaded
-file is identical and works fully offline.*
+*The hosted version is built from `main` and currently includes the preview FPV flight;
+the downloaded file is the same payload and works fully offline.*
 
 The map covers **63.1 × 46.3 km** of real terrain, from the Three Gorges Dam in the west to Yichang Sanxia Airport in the east, with the Yangtze cutting through the middle.
 
@@ -89,8 +90,10 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 
 **Option 2 — download it and keep it offline**
 
-1. Grab `index.html` from the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
-   (31.6 MB, one file, the entire program). Older builds are under [all releases](../../releases).
+1. Grab `index.html` (31.6 MB — one file, and it is the entire program) from the
+   [v1.2 **preview** release](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2), which adds the FPV
+   river flight and is still being tested; the [stable v1.1](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.1)
+   is the same map without it. Everything is listed under [all releases](../../releases).
 2. Open it:
    - **iPhone / iPad** — save it to *Files* and tap it.
    - **Desktop** — just double-click it.

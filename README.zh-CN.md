@@ -9,9 +9,10 @@
 所有东西都装在一个 **31 MB 的 `.html` 文件**里：渲染器、着色器、界面、卫星影像和高程模型。不需要服务器，不需要构建，不需要包管理器，下载后也**完全不需要联网**。打开文件就能起飞。
 
 **在线试玩：** <https://radiosky-bilibili.github.io/yichang-3d/>
-&nbsp;·&nbsp; **下载：** [index.html，31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
+&nbsp;·&nbsp; **下载：** [v1.2 **预览版** —— index.html，31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/index.html) —— 新增长江航线 FPV 飞行，仍在测试中
+&nbsp;·&nbsp; **稳定版：** [v1.1 —— index.html，31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.1/index.html) —— 同一张地图，不含 FPV 飞行
 
-*网页版和下载版使用的是同一份内嵌数据，两个文件完全一致，下载后可以完全离线使用。*
+*网页版由 `main` 分支构建，目前包含预览版 FPV 飞行；下载文件是同一份数据，下载后可以完全离线使用。*
 
 地图覆盖 **63.1 × 46.3 公里**的真实地形，西起三峡大坝，东至宜昌三峡机场，长江从中穿过。
 
@@ -87,8 +88,8 @@
 
 **方式二 —— 下载下来，离线使用**
 
-1. 从[最新发布](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)下载 `index.html`
-   （31.5 MB，单个文件，就是整个程序）。旧版本在[全部发布](../../releases)里。
+1. 下载 `index.html`（31.6 MB —— 单个文件，就是整个程序）：[v1.2 **预览版**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2)
+   新增长江航线 FPV 飞行、仍在测试中；[稳定版 v1.1](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.1) 是同一张地图、不含 FPV。全部版本见[全部发布](../../releases)。
 2. 打开它：
    - **iPhone / iPad** —— 存到*文件*里，点一下即可。
    - **电脑** —— 直接双击。
