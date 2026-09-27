@@ -9,7 +9,7 @@
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
 **Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
-&nbsp;·&nbsp; **Download:** [index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
+&nbsp;·&nbsp; **Download:** [index.html, 31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
 
 *The hosted version streams the same embedded payload as the download; the downloaded
 file is identical and works fully offline.*
@@ -50,6 +50,18 @@ The settings panel exposes the whole look of the map:
 
 Six independent toggles: **landmark labels, graticule, contour lines, relief shading, mountain mist, ground shadow.** Moving the sun slider relights the entire terrain, the sky and the fog colour in real time — no rebuild, no reload.
 
+### 4. Fly the whole river — FPV auto-flight
+
+A cinematic flight camera that follows the Yangtze for **82.4 km**, from the reservoir above the Three Gorges Dam all the way down to Yichang Sanxia Airport.
+
+- **Tap the route button** at the top of the right-hand button stack (or press `F`) and the map hands the camera over to the flight and clears its own interface out of the way.
+- The camera hugs the valley: it skims roughly **150 m above the water**, banks into the bends, opens its field of view as it accelerates (cruise ≈ 670 km/h, up to ≈ 820 km/h on the open stretches) and drifts gently like a handheld rig.
+- **It introduces the landmarks by itself.** Along the way it climbs several hundred metres and turns to face each landmark — the Three Gorges Dam, Xiling Gorge, Sanxia Renjia, Sanyoudong, Gezhouba Dam, Yichang downtown, Yichang East Station, Yichang Sanxia Airport — a card fades in with the name, elevation and distance off-route, and a reticle locks onto the target; it becomes an edge arrow when the landmark slides out of frame. Landmarks that sit well off the river are picked up early and shot with a longer lens.
+- **Chase-cam HUD**: speed, altitude, height above ground, heading, a whole-route progress bar with landmark ticks and the distance to the next landmark.
+- **Bottom bar**: speed (0.7× / 1× / 1.4×), landmark tracking on/off, HUD on/off, **previous / next landmark (◀ ▶, or `←` `→`)** so you never have to sit through the long stretches, and exit.
+- **Idle auto-cruise**: leave the map alone for two minutes and the built-in landmark tour starts by itself — 20 landmarks, one every 4.2 s, then it stops and gives the map back. Any touch takes over immediately. You can switch it off or change the delay under *Display settings → Idle auto-cruise*.
+- It is **real-time rendering, not a video**: the file contains no video data at all, just this map's own renderer being flown by a script. The whole feature adds about 40 KB to the 31 MB page.
+
 ---
 
 ## Gallery
@@ -62,6 +74,7 @@ Desktop and mobile, side by side — one pair per scene.
 | <img src="desktop-landmark.jpg" width="620" alt="Desktop — landmark card with elevation, coordinates and description"><br>*Landmark card* | <img src="screenshot-landmark.jpg" width="130" alt="Mobile — landmark card"><br>*Landmark card* |
 | <img src="desktop-flight.jpg" width="620" alt="Desktop — flying the paper plane, HUD showing speed, altitude and heading"><br>*Flying the paper plane* | <img src="screenshot-flight.jpg" width="130" alt="Mobile — flying the paper plane"><br>*Flying the paper plane* |
 | <img src="desktop-settings.jpg" width="620" alt="Desktop — the settings panel"><br>*Settings panel* | <img src="screenshot-settings.jpg" width="130" alt="Mobile — the settings panel"><br>*Settings panel* |
+| <img src="desktop-fpv.jpg" width="620" alt="Desktop — the FPV river flight over Yichang downtown: landmark card, locked-on reticle and chase-cam HUD"><br>*FPV river flight* | <img src="screenshot-fpv.jpg" width="130" alt="Mobile — the FPV river flight, portrait layout"><br>*FPV river flight* |
 
 ---
 
@@ -77,7 +90,7 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 **Option 2 — download it and keep it offline**
 
 1. Grab `index.html` from the [latest release](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest)
-   (31.5 MB, one file, the entire program). Older builds are under [all releases](../../releases).
+   (31.6 MB, one file, the entire program). Older builds are under [all releases](../../releases).
 2. Open it:
    - **iPhone / iPad** — save it to *Files* and tap it.
    - **Desktop** — just double-click it.
@@ -97,6 +110,8 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 | Fly the plane | drag while in flight mode — horizontal = turn, vertical = pitch |
 | Throttle | ▲ / ▼ buttons (hold to change continuously) |
 | Leave flight mode | *Exit flight* button; the camera returns to the plane's position |
+| Start / leave the FPV river flight | route button at the top of the right-hand stack, or `F` / `Esc` |
+| Next / previous landmark in flight | ◀ / ▶ in the bottom bar, or `←` `→` |
 
 ---
 
@@ -121,6 +136,9 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 - **Level of detail in the shader:** contour line width and the strength of the urban detail layer adapt to the metres-per-pixel the camera is currently seeing.
 - **Label system in HTML**, not in GL: screen-space placement, occlusion culling by ray-marching against the elevation field, greedy anti-overlap (big landmarks win), clamped inside the viewport, and kept clear of the top bar and the bottom quick-jump bar.
 - **A small debug API** is left in on purpose: `window.frame()` forces a single render (useful when the tab is in the background and `requestAnimationFrame` is throttled) and `window.noAnim()` kills CSS transitions for clean screenshots.
+
+- **The FPV flight is a scripted camera, not a video.** The route is the Yangtze centreline traced by hand over the imagery and then snapped to the DEM valley floor (82.4 km, 688 points) and re-parameterised by arc length. Every frame the script takes a point on that curve, samples the terrain around it for a safe clearance, blends the look-at point from "ahead along the river" towards the next landmark, and hands the camera to the map's normal `requestAnimationFrame` loop — the renderer, the terrain and the imagery are all the map's own.
+- **The HUD is a DOM canvas layer**, not part of the WebGL scene: drawing 1920 × 1080 of interface into a texture cost ~57 ms per frame, the DOM layer costs ~1.4 ms and the browser composites it for free. It re-lays itself out for portrait or landscape, and the bottom of the interface is pushed up by the measured height of the control bar.
 
 ---
 
@@ -199,6 +217,8 @@ screenshot-settings.jpg       mobile — the settings panel
 desktop-overview.jpg          desktop — satellite overview of the map
 desktop-landmark.jpg          desktop — a landmark card
 desktop-flight.jpg            desktop — flying the paper plane
+desktop-fpv.jpg               desktop — the FPV river flight (landmark card + chase-cam HUD)
+screenshot-fpv.jpg            mobile — the FPV river flight, portrait
 desktop-settings.jpg          desktop — the settings panel
 README.md                     this file (English)
 README.zh-CN.md               the same document in Chinese
