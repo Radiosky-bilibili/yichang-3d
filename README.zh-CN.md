@@ -12,7 +12,7 @@
 &nbsp;·&nbsp; **下载：** [v1.2 **预览版** —— index.html，31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/index.html) —— 新增长江航线 FPV 飞行，仍在测试中
 &nbsp;·&nbsp; **稳定版：** [v1.1 —— index.html，31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.1/index.html) —— 同一张地图，不含 FPV 飞行
 
-*网页版由 `main` 分支构建，目前包含预览版 FPV 飞行；下载文件是同一份数据，下载后可以完全离线使用。*
+*网页版是**稳定版**（`main` 分支，不含 FPV 飞行）—— FPV 长江航线飞行在 [v1.2 预览版](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2) 里。下载文件是同一份数据，下载后可以完全离线使用。*
 
 地图覆盖 **63.1 × 46.3 公里**的真实地形，西起三峡大坝，东至宜昌三峡机场，长江从中穿过。
 
@@ -50,7 +50,7 @@
 
 六个独立开关：**地标标签、经纬网格、等高线、晕渲、山间雾气、地面阴影。** 拖动太阳滑块会实时重新照亮整个地形、天空和雾色 —— 无需重建，无需刷新。
 
-### 4. 长江航线 —— FPV 自动飞行
+### 4. 长江航线 —— FPV 自动飞行 *（v1.2 预览版新增）*
 
 一条电影感的飞行镜头，顺长江飞 **82.4 公里**：从三峡大坝上游的库区一直飞到宜昌三峡机场。
 
@@ -74,7 +74,7 @@
 | <img src="desktop-landmark.jpg" width="620" alt="电脑端 —— 地标卡片，含高程、坐标与简介"><br>*地标卡片* | <img src="screenshot-landmark.jpg" width="130" alt="手机端 —— 地标卡片"><br>*地标卡片* |
 | <img src="desktop-flight.jpg" width="620" alt="电脑端 —— 驾驶纸飞机，HUD 显示速度、高度与航向"><br>*驾驶纸飞机* | <img src="screenshot-flight.jpg" width="130" alt="手机端 —— 驾驶纸飞机"><br>*驾驶纸飞机* |
 | <img src="desktop-settings.jpg" width="620" alt="电脑端 —— 设置面板"><br>*设置面板* | <img src="screenshot-settings.jpg" width="130" alt="手机端 —— 设置面板"><br>*设置面板* |
-| <img src="desktop-fpv.jpg" width="620" alt="电脑端 —— FPV 长江航线飞行，含地标卡片、锁定准星与追机 HUD"><br>*FPV 航线飞行* | <img src="screenshot-fpv.jpg" width="130" alt="手机端 —— FPV 航线飞行（竖屏版式）"><br>*FPV 航线飞行* |
+| <img src="desktop-fpv.jpg" width="620" alt="电脑端 —— FPV 长江航线飞行，含地标卡片、锁定准星与追机 HUD"><br>*FPV 航线飞行（预览版）* | <img src="screenshot-fpv.jpg" width="130" alt="手机端 —— FPV 航线飞行（竖屏版式）"><br>*FPV 航线飞行（预览版）* |
 
 ---
 
@@ -109,8 +109,8 @@
 | 驾驶飞机 | 飞行模式下拖动 —— 水平方向控制转向，垂直方向控制俯仰 |
 | 油门 | ▲ / ▼ 按钮（按住可连续变化） |
 | 退出飞行模式 | *退出飞行*按钮；镜头会回到飞机所在位置 |
-| 进入 / 退出 FPV 航线飞行 | 右侧按钮栏最上方的「航线」按钮，或 `F` / `Esc` |
-| 飞行中跳到上 / 下一个地标 | 控制条上的 ◀ / ▶，或键盘 `←` `→` |
+| 进入 / 退出 FPV 航线飞行 *（v1.2 预览版）* | 右侧按钮栏最上方的「航线」按钮，或 `F` / `Esc` |
+| 飞行中跳到上 / 下一个地标 *（v1.2 预览版）* | 控制条上的 ◀ / ▶，或键盘 `←` `→` |
 
 ---
 
