@@ -1,5 +1,7 @@
 # 3D Yichang — an interactive 3D map of the Three Gorges
 
+**English** · [中文](./README.zh-CN.md)
+
 **A single-file, offline 3D map of the Yangtze valley around Yichang (Hubei, China), running entirely in the browser.**
 
 ![Yichang 3D map — satellite view of the Three Gorges](screenshot-overview.jpg)
@@ -7,7 +9,7 @@
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
 **Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
-&nbsp;·&nbsp; **Download:** [v1.0 — index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
+&nbsp;·&nbsp; **Download:** [index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/latest/download/index.html)
 
 *The hosted version streams the same embedded payload as the download; the downloaded
 file is identical and works fully offline.*
@@ -53,6 +55,19 @@ The settings panel exposes the whole look of the map:
 Six independent toggles: **landmark labels, graticule, contour lines, relief shading, mountain mist, ground shadow.** Moving the sun slider relights the entire terrain, the sky and the fog colour in real time — no rebuild, no reload.
 
 <img src="screenshot-settings.jpg" width="420" alt="The settings panel: terrain exaggeration, sun azimuth, sun elevation, fog density, label size, mesh resolution and six independent toggles">
+
+---
+
+## Gallery
+
+Desktop and mobile, side by side — one pair per scene.
+
+| Desktop | Mobile |
+| :---: | :---: |
+| <img src="desktop-overview.jpg" width="620" alt="Desktop — map overview with the bottom quick-jump bar"><br>*Map overview* | <img src="screenshot-overview.jpg" width="130" alt="Mobile — map overview"><br>*Map overview* |
+| <img src="desktop-landmark.jpg" width="620" alt="Desktop — landmark card with elevation, coordinates and description"><br>*Landmark card* | <img src="screenshot-landmark.jpg" width="130" alt="Mobile — landmark card"><br>*Landmark card* |
+| <img src="desktop-flight.jpg" width="620" alt="Desktop — flying the paper plane, HUD showing speed, altitude and heading"><br>*Flying the paper plane* | <img src="screenshot-flight.jpg" width="130" alt="Mobile — flying the paper plane"><br>*Flying the paper plane* |
+| <img src="desktop-settings.jpg" width="620" alt="Desktop — the settings panel"><br>*Settings panel* | <img src="screenshot-settings.jpg" width="130" alt="Mobile — the settings panel"><br>*Settings panel* |
 
 ---
 
@@ -183,11 +198,16 @@ The project is provided **"as is", without warranty of any kind**, express or im
 
 ```
 index.html                    the entire application — one self-contained file
-screenshot-overview.jpg       satellite overview of the map (above)
-screenshot-landmark.jpg       a landmark card
-screenshot-flight.jpg         flying the paper plane
-screenshot-settings.jpg       the settings panel
-README.md                     this file
+screenshot-overview.jpg       mobile — satellite overview of the map
+screenshot-landmark.jpg       mobile — a landmark card
+screenshot-flight.jpg         mobile — flying the paper plane
+screenshot-settings.jpg       mobile — the settings panel
+desktop-overview.jpg          desktop — satellite overview of the map
+desktop-landmark.jpg          desktop — a landmark card
+desktop-flight.jpg            desktop — flying the paper plane
+desktop-settings.jpg          desktop — the settings panel
+README.md                     this file (English)
+README.zh-CN.md               the same document in Chinese
 LICENSE                       optional — see the copyright section above
 ```
 
