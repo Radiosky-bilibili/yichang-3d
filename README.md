@@ -208,9 +208,9 @@ interface and this README, working under that direction.
 - **Elevation:** AWS Open Data Terrain Tiles, originally produced by Mapzen.
 - **Place names and landmark facts:** public sources.
 
-**Follow the author.** Radiosky posts his projects on Bilibili as **Radiosky_天空** — if you
+**Follow the author.** Radiosky posts his projects on Bilibili as **Radiosky_电波天空** — if you
 enjoyed this map, following him there is the best way to say thanks:
-<https://search.bilibili.com/upuser?keyword=Radiosky_%E5%A4%A9%E7%A9%BA>
+<https://space.bilibili.com/1274098107>
 
 *If you use this in a school project, a blog post or a demo, a mention of Radiosky_bilibili,
 DeepSeekHardness, MINIS and Doubao is appreciated, even though nothing here obliges you to.*
