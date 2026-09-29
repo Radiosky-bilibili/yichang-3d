@@ -244,6 +244,30 @@ interface and this README, working under that direction.
 - **Elevation:** AWS Open Data Terrain Tiles, originally produced by Mapzen.
 - **Place names and landmark facts:** public sources.
 
+## How it was made — the making-of repository
+
+The long version of this project — how the 82 km flight route was made, and the three times the
+approach was wrong before it was right — lives in a separate repository:
+
+**<https://github.com/Radiosky-bilibili/yichang3d-toolkit>**
+
+It contains:
+
+- **[MAKING-OF.md](https://github.com/Radiosky-bilibili/yichang3d-toolkit/blob/main/MAKING-OF.md)** —
+  a field log rather than a tutorial: automatic river detection failing, going back to
+  hand-drawn points, smoothing a route *without* sanding off intent, a 555 m registration trap
+  that nearly broke the terrain, and a HUD that got 40× faster by being drawn somewhere else.
+  (Also [in English](https://github.com/Radiosky-bilibili/yichang3d-toolkit/blob/main/MAKING-OF.en.md).)
+- **The tools**, ready to open: the route-drawing tool, the route-checking tool, the smoothing
+  preview.
+- **The scripts** in the order they were used: mosaic elevation tiles, register them, smooth a
+  route with a leash, render a base map from a DEM, build the app, record frames to video.
+- **The data**: the 32 hand-drawn points, the 129 smoothed control points, and the final
+  688-point route.
+
+Worth a look if you want to see what the process actually looked like —
+including the parts that didn't work.
+
 **Follow the author.** Radiosky posts his projects on Bilibili as **Radiosky_电波天空** — if you
 enjoyed this map, following him there is the best way to say thanks:
 <https://space.bilibili.com/1274098107>
