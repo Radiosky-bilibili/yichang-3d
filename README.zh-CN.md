@@ -48,7 +48,7 @@
 - **其他地区：** <https://radiosky-bilibili.github.io/yichang-3d/> —— 同一张地图，托管在 GitHub Pages。
 
 **下载离线版：** [v1.2 —— index.html，32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) —— 当前稳定版，保存后完全离线可用
-&nbsp;·&nbsp; [v1.2 预览版 —— FPV 航线飞行](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2-preview)，仍在测试
+&nbsp;·&nbsp; [**FPV 航线飞行**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/FPV)，31.6 MB —— 独立版本，长江全程自动飞行相机
 
 *哔哩哔哩 Toy 版和 GitHub Pages 版是同一张地图，只是打包方式不同。交互式 3D 需要 WebGL 2，较老的设备可能吃力。*
 
@@ -107,7 +107,7 @@
 
 六个独立开关：**地标标签、经纬网格、等高线、晕渲、山间雾气、地面阴影。** 拖动太阳滑块会实时重新照亮整个地形、天空和雾色 —— 无需重建，无需刷新。
 
-### 4. 长江航线 —— FPV 自动飞行 *（v1.2 预览版新增）*
+### 4. 长江航线 —— FPV 自动飞行 *（FPV 版版新增）*
 
 一条电影感的飞行镜头，顺长江飞 **82.4 公里**：从三峡大坝上游的库区一直飞到宜昌三峡机场。
 
@@ -166,8 +166,8 @@
 | 驾驶飞机 | 飞行模式下拖动 —— 水平方向控制转向，垂直方向控制俯仰 |
 | 油门 | ▲ / ▼ 按钮（按住可连续变化） |
 | 退出飞行模式 | *退出飞行*按钮；镜头会回到飞机所在位置 |
-| 进入 / 退出 FPV 航线飞行 *（v1.2 预览版）* | 右侧按钮栏最上方的「航线」按钮，或 `F` / `Esc` |
-| 飞行中跳到上 / 下一个地标 *（v1.2 预览版）* | 控制条上的 ◀ / ▶，或键盘 `←` `→` |
+| 进入 / 退出 FPV 航线飞行 *（FPV 独立版）* | 右侧按钮栏最上方的「航线」按钮，或 `F` / `Esc` |
+| 飞行中跳到上 / 下一个地标 *（FPV 独立版）* | 控制条上的 ◀ / ▶，或键盘 `←` `→` |
 
 ---
 

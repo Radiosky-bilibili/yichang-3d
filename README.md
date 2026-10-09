@@ -48,7 +48,7 @@ Everything lives inside one **32.5 MB `.html` file**: the renderer, the shaders,
 - **Anywhere else:** <https://radiosky-bilibili.github.io/yichang-3d/> — the same map on GitHub Pages.
 
 **Download a copy:** [v1.2 — index.html, 32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) — the current stable build, fully offline once saved
-&nbsp;·&nbsp; [v1.2 preview — FPV river flight](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2-preview), still being tested
+&nbsp;·&nbsp; [**FPV river flight**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/FPV), 31.6 MB — a standalone build for the automatic river camera
 
 *The Bilibili Toy build and the GitHub Pages build are the same map, packaged differently. The interactive 3D requires WebGL 2, so an older device may struggle.*
 
@@ -107,7 +107,7 @@ The settings panel exposes the whole look of the map:
 
 Six independent toggles: **landmark labels, graticule, contour lines, relief shading, mountain mist, ground shadow.** Moving the sun slider relights the entire terrain, the sky and the fog colour in real time — no rebuild, no reload.
 
-### 4. Fly the whole river — FPV auto-flight *(v1.2 preview build)*
+### 4. Fly the whole river — FPV auto-flight *(separate build)*
 
 A cinematic flight camera that follows the Yangtze for **82.4 km**, from the reservoir above the Three Gorges Dam all the way down to Yichang Sanxia Airport.
 
@@ -131,7 +131,7 @@ Desktop and mobile, side by side — one pair per scene.
 | <img src="desktop-landmark.jpg" width="620" alt="Desktop — landmark card with elevation, coordinates and description"><br>*Landmark card* | <img src="screenshot-landmark.jpg" width="130" alt="Mobile — landmark card"><br>*Landmark card* |
 | <img src="desktop-flight.jpg" width="620" alt="Desktop — flying the paper plane, HUD showing speed, altitude and heading"><br>*Flying the paper plane* | <img src="screenshot-flight.jpg" width="130" alt="Mobile — flying the paper plane"><br>*Flying the paper plane* |
 | <img src="desktop-settings.jpg" width="620" alt="Desktop — the settings panel"><br>*Settings panel* | <img src="screenshot-settings.jpg" width="130" alt="Mobile — the settings panel"><br>*Settings panel* |
-| <img src="desktop-fpv.jpg" width="620" alt="Desktop — the FPV river flight over Yichang downtown: landmark card, locked-on reticle and chase-cam HUD"><br>*FPV river flight (preview)* | <img src="screenshot-fpv.jpg" width="130" alt="Mobile — the FPV river flight, portrait layout"><br>*FPV river flight (preview)* |
+| <img src="desktop-fpv.jpg" width="620" alt="Desktop — the FPV river flight over Yichang downtown: landmark card, locked-on reticle and chase-cam HUD"><br>*FPV river flight* | <img src="screenshot-fpv.jpg" width="130" alt="Mobile — the FPV river flight, portrait layout"><br>*FPV river flight* |
 
 ---
 
@@ -169,8 +169,8 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 | Fly the plane | drag while in flight mode — horizontal = turn, vertical = pitch |
 | Throttle | ▲ / ▼ buttons (hold to change continuously) |
 | Leave flight mode | *Exit flight* button; the camera returns to the plane's position |
-| Start / leave the FPV river flight *(v1.2 preview)* | route button at the top of the right-hand stack, or `F` / `Esc` |
-| Next / previous landmark in flight *(v1.2 preview)* | ◀ / ▶ in the bottom bar, or `←` `→` |
+| Start / leave the FPV river flight *(FPV build only)* | route button at the top of the right-hand stack, or `F` / `Esc` |
+| Next / previous landmark in flight *(FPV build only)* | ◀ / ▶ in the bottom bar, or `←` `→` |
 
 ---
 
