@@ -2,6 +2,11 @@
   <img src="./figures/logo.png" width="88%" alt="宜昌 3D 地图 · 3D Yichang" />
 </div>
 
+<div align="center">
+  <b>English</b> &nbsp;·&nbsp; <a href="./README.zh-CN.md">中文</a>
+</div>
+<br>
+
 <div align="center" style="line-height: 1.9;">
   <!-- 试玩入口 -->
   <a href="https://b23.tv/aunUQsI"><img alt="哔哩哔哩 Toy"
