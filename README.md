@@ -48,7 +48,7 @@ Everything lives inside one **32.5 MB `.html` file**: the renderer, the shaders,
 - **Anywhere else:** <https://radiosky-bilibili.github.io/yichang-3d/> — the same map on GitHub Pages.
 
 **Download a copy:** [v1.2 — index.html, 32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) — the current stable build, fully offline once saved
-&nbsp;·&nbsp; [**FPV river flight**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/FPV), 31.6 MB — a standalone build for the automatic river camera
+&nbsp;·&nbsp; [**lab · river flight**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/lab-river-flight), 31.6 MB — 🧪 an experiment: an automatic cinematic camera down the river
 
 *The Bilibili Toy build and the GitHub Pages build are the same map, packaged differently. The interactive 3D requires WebGL 2, so an older device may struggle.*
 
@@ -147,8 +147,8 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 **Option 2 — download it and keep it offline**
 
 1. Grab `index.html` (31.6 MB — one file, and it is the entire program) from the
-   [v1.2 **preview** release](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2), which adds the FPV
-   river flight and is still being tested; the [stable v1.1](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.1)
+   [**lab · river flight**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/lab-river-flight), which adds the FPV
+   river camera and is an experiment rather than a release; the [stable v1.2](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2)
    is the same map without it. Everything is listed under [all releases](../../releases).
 2. Open it:
    - **iPhone / iPad** — save it to *Files* and tap it.

@@ -48,7 +48,7 @@
 - **其他地区：** <https://radiosky-bilibili.github.io/yichang-3d/> —— 同一张地图，托管在 GitHub Pages。
 
 **下载离线版：** [v1.2 —— index.html，32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) —— 当前稳定版，保存后完全离线可用
-&nbsp;·&nbsp; [**FPV 航线飞行**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/FPV)，31.6 MB —— 独立版本，长江全程自动飞行相机
+&nbsp;·&nbsp; [**lab · 航线飞行**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/lab-river-flight)，31.6 MB —— 🧪 实验：长江全程自动飞行相机
 
 *哔哩哔哩 Toy 版和 GitHub Pages 版是同一张地图，只是打包方式不同。交互式 3D 需要 WebGL 2，较老的设备可能吃力。*
 
@@ -145,8 +145,7 @@
 
 **方式二 —— 下载下来，离线使用**
 
-1. 下载 `index.html`（31.6 MB —— 单个文件，就是整个程序）：[v1.2 **预览版**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2)
-   新增长江航线 FPV 飞行、仍在测试中；[稳定版 v1.1](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.1) 是同一张地图、不含 FPV。全部版本见[全部发布](../../releases)。
+1. 下载 `index.html`（32.5 MB —— 单个文件，就是整个程序）：[**v1.2 正式版**](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2)。想试实验性的[航线飞行相机](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/lab-river-flight)也可以，但那是实验版本、不保证可用。全部版本见[所有发布](../../releases)。
 2. 打开它：
    - **iPhone / iPad** —— 存到*文件*里，点一下即可。
    - **电脑** —— 直接双击。
