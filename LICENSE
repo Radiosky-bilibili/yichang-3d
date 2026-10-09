@@ -1,0 +1,47 @@
+MIT License
+
+Copyright (c) 2026 Radiosky_bilibili (project lead), DeepSeekHardness,
+MINIS and Doubao (AI collaborators)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+SCOPE AND THIRD-PARTY NOTICES
+================================================================================
+
+This licence covers the project's own code only: the HTML, JavaScript, GLSL,
+interface design, landmark write-ups and documentation authored for this
+project.
+
+It does NOT cover the following, which remain under their own terms:
+
+1. three.js (inlined, r146) — MIT License, © 2010-2023 three.js authors.
+   The inlined bundle retains its SPDX `MIT` header; keep it if you redistribute.
+
+2. Satellite imagery (Esri World Imagery) — © Esri, Maxar, Earthstar
+   Geographics and the GIS User Community. NOT licensed to you by this project.
+   See the "Copyright, attribution and licensing" section of README.md before
+   redistributing any build that embeds this imagery.
+
+3. Elevation data — AWS Open Data "Terrain Tiles" (Terrarium PNG, by Mapzen),
+   derived from public sources including Copernicus DEM, NASA/USGS SRTM,
+   ArcticDEM and Geoscience Australia. See README.md for full attribution.
+
+4. Satellite imagery from third-party tile services, when loaded at runtime,
+   is subject to the terms of the service being queried.

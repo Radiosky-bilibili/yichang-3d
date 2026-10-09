@@ -121,8 +121,7 @@
 | 范围 | 东经 110.918° – 111.577°，北纬 30.487° – 30.902°（63.1 × 46.3 公里） |
 | 高程范围 | −153 米 … 1492 米 |
 | 高程模型 | AWS Open Data *Terrain Tiles*（Terrarium PNG，z12，约 33 米/采样点），1024 × 1024 网格 |
-| 影像 | Esri World Imagery：全域 z14（8.2 米/像素）+ 城区核心区 z16（2.0 米/像素）细节层 |
-| 基准 | GCJ-02 对齐（见*版权*一节中的说明） |
+| 影像 | Esri World Imagery：全域 z14（8.2 米/像素）+ **六块高清补丁**（城区核心 2.05、三峡大坝 1.72、秭归／机场／两个火车站 2.05 米/像素）| 基准 | GCJ-02 对齐（见*版权*一节中的说明） |
 | 地标 | 20 个兴趣点 + 2 个河流标注 |
 
 ---
@@ -160,9 +159,11 @@
 
 本仓库中的应用代码（HTML、JavaScript、GLSL、UI 设计、地标文字和本 README）是在 *DeepSeekHardness* 与 *MINIS*、*Doubao* 的主导下**由 AI 生成**的。
 
-有一点需要说明白：在某些司法辖区（包括美国），纯粹由 AI 生成的产出**不受版权保护**，因为版权要求人类作者身份；另一些辖区则把有人类创意主导的 AI 辅助作品视为可保护。本项目不猜测答案，而是采取最宽松的立场：**假定应用代码不归任何人所有，将其视为类公有领域材料，你可以自由复制、修改、复用和再发布。** 无需许可，无需署名（当然，附上回链始终欢迎）。
+**许可：[MIT](LICENSE)。** 你可以自由使用、复制、修改、合并、发布、再许可和出售本项目自身的代码，唯一条件是：当你再分发其实质性部分时，保留版权声明与许可声明。
 
-这一宽松立场**仅适用于本项目自身的代码**。下列第三方组件和数据仍受其各自条款约束，这些条款对你依然有效。
+关于作者身份，需要说明白：在某些司法辖区（包括美国），纯粹由 AI 生成的产出**可能不受版权保护**，因为版权要求人类作者身份；另一些辖区则把有人类创意主导的 AI 辅助作品视为可保护。本项目不去解决这个法律问题 —— 代码的编排、测试、修正与数据整合是由下列署名者完成的，他们认为整个作品归其所有并可对外授权，因此以 MIT 条款授权给你。若某辖区对其中某部分不承认版权，那部分就是可自由使用的。
+
+MIT 许可**仅适用于本项目自身的代码**。下列第三方组件和数据仍受其各自条款约束，这些条款对你依然有效。
 
 ### 第三方代码
 
@@ -173,8 +174,50 @@
 
 ### 第三方数据 —— 影像与高程
 
-- **卫星影像：Esri World Imagery。** 瓦片版权归 © Esri、Maxar、Earthstar Geographics 及 GIS User Community 所有，由 Esri 的 ArcGIS World Imagery 服务提供。**本项目不拥有这些影像，也未授予你任何相关权利。** 影像在此仅作为静态、非商业性的演示而内嵌。如果你要再发布、再分发或商业使用，请自行向 Esri 获取授权。请勿把本仓库当作影像来源。
-- **高程：AWS Open Data「Terrain Tiles」（Terrarium PNG 格式，由 Mapzen 制作）。** 高度数据源自公开数据集（主要为 NASA/USGS SRTM 及其他开放 DEM）。逐数据集的具体署名请见 AWS Registry of Open Data；复用时请注明 Mapzen / AWS Open Data。
+- **卫星影像：Esri World Imagery。** 瓦片版权归 © Esri、Maxar、Earthstar Geographics 及 GIS User Community 所有，由 Esri 的 ArcGIS World Imagery 服务提供。**本项目不拥有这些影像，也未授予你任何相关权利。**
+
+  **在再分发前请务必读这一段。** 影像以 base64 形式内嵌在 `index.html` 里 —— 也就是说 *本仓库确实在再分发 Esri 的影像*。对这样的静态非商业演示来说这没问题，但这**不是本项目能转授给你的权利**。具体来说：
+
+  | 你想做的事 | 意味着 |
+  | --- | --- |
+  | 看效果、本地运行、学习代码 | 没问题。 |
+  | Fork 仓库并保留影像 | 你就在自己再分发 Esri 影像了。请自取授权，或者换掉影像（见下）。 |
+  | 商业使用、或用于产品 | 向 Esri 获取授权。 |
+  | 把本仓库当作影像来源 | 请不要。 |
+
+  **如果需要，有两条干净的路：**
+
+  1. **换成开放影像。** 推荐 **Sentinel-2**（ESA / Copernicus，CC BY-SA 3.0 IGO）—— 免费使用、修改和再分发，只需署名。分辨率 10 米/像素，本版用的是 8.2 米/像素，代价约 20% 的细节，并不多。下载、拼接与**配准**影像的构建脚本在 [yichang3d-toolkit](https://github.com/Radiosky-bilibili/yichang3d-toolkit)；该仓库里附带的底图就是用同一套流程做的。
+
+  2. **改为运行时加载影像**，指向你自己能接受的瓦片服务。这是**代码改动**而非数据改动：地形着色器只需要一张纹理，并不关心它从哪来。代价是失去"离线单文件"这个特性。
+
+  高程数据完全没有这些问题 —— 见下。
+- **高程：AWS Open Data「Terrain Tiles」—— Terrarium PNG 格式，由 Mapzen（Linux 基金会项目）制作，托管于 `s3://elevation-tiles-prod`。** 瓦片由多套国家级与全球 DEM 拼合而成，**其中若干数据集要求署名**。如果你再发布本项目或其构建产物，请一并保留以下声明：
+
+  ```
+  * Mapzen
+  * ArcticDEM terrain data DEM(s) were created from DigitalGlobe, Inc., imagery and
+    funded under National Science Foundation awards 1043681, 1559691, and 1542736;
+  * Australia terrain data (c) Commonwealth of Australia (Geoscience Australia) 2017;
+  * Austria terrain data (c) offene Daten Oesterreichs - Digitales Gelaendemodell (DGM) Oesterreich;
+  * Canada terrain data contains information licensed under the Open Government
+    Licence - Canada;
+  * Europe terrain data produced using Copernicus data and information funded by the
+    European Union - EU-DEM layers;
+  * Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration;
+  * Mexico terrain data source: INEGI, Continental relief, 2016;
+  * New Zealand terrain data Copyright 2011 Crown copyright (c) Land Information New
+    Zealand and the New Zealand Government (All rights reserved);
+  * Norway terrain data (c) Kartverket;
+  * United Kingdom terrain data (c) Environment Agency copyright and/or database right
+    2015. All rights reserved;
+  * United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data
+    courtesy of the U.S. Geological Survey.
+  ```
+
+  权威清单见 [tilezen/joerd docs/attribution.md](https://github.com/tilezen/joerd/blob/master/docs/attribution.md)。本项目关注区域在中国，实际参与的是其中的全球数据集 —— **SRTM / GMTED2010 / 3DEP（USGS）** 与 **ETOPO1（NOAA）**；但上面列出完整清单，因为该瓦片集是全球性的，读者无法判断哪块瓦片进入了哪个像素。
+
+  引用格式：*Terrain Tiles 取自 https://registry.opendata.aws/terrain-tiles。*
 - **地标名称、坐标和描述**汇编自公开来源（百科、市政及旅游页面），仅为信息与方位参考而收录。不对其主张任何所有权，也不保证准确性。
 
 ### 非关联声明与商标
@@ -221,7 +264,7 @@ desktop-flight.jpg            电脑端 —— 驾驶纸飞机
 desktop-settings.jpg          电脑端 —— 设置面板
 README.md                     英文说明
 README.zh-CN.md               本文件（中文说明）
-LICENSE                       可选 —— 见上方版权一节
+LICENSE                       MIT 许可（适用于本项目自身代码）
 ```
 
 ---
