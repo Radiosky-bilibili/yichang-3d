@@ -30,6 +30,14 @@
 
 <br>
 
+> ### ⚠️ Read this before you redistribute the file
+>
+> **The satellite imagery embedded in this project belongs to Esri and its partners — it is not open data, and this project cannot pass on any rights to it.**
+>
+> The imagery is baked into `index.html` as base64, so **downloading that file gives you a copy of Esri's imagery**. For a personal, offline, non-commercial look, that is the situation this project was built for. **If you want to redistribute, republish, mirror, package, sell or build on it, you must obtain your own licence from Esri first — or replace the imagery with open data.** See [Copyright, attribution and licensing](#-copyright-attribution-and-licensing) for the details and for two ways out.
+>
+> The **code** is MIT and yours to use freely. It is the **imagery** that carries the restriction.
+
 **A single-file, offline 3D map of the Yangtze valley around Yichang (Hubei, China), running entirely in the browser.**
 
 Everything lives inside one **32.5 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
@@ -173,7 +181,7 @@ visit: the page carries its own 31 MB of imagery and elevation data.
 | Extent | 110.918° – 111.577° E, 30.487° – 30.902° N (63.1 × 46.3 km) |
 | Elevation range | −153 m … 1492 m |
 | Elevation model | AWS Open Data *Terrain Tiles* (Terrarium PNG, z12, ≈ 33 m per sample), 1024 × 1024 grid |
-| Imagery | Esri World Imagery: global z14 (8.2 m/px) + **six high-detail patches** (city core 2.05, Three Gorges Dam 1.72, Zigui / airport / two railway stations 2.05 m/px) | Datum | GCJ-02 aligned (see the note under *Copyright*) |
+| Imagery ⚠️ | Esri World Imagery: global z14 (8.2 m/px) + **six high-detail patches** (city core 2.05, Three Gorges Dam 1.72, Zigui / airport / two railway stations 2.05 m/px). **Not open data — see the notice at the top.** | Datum | GCJ-02 aligned (see the note under *Copyright*) |
 | Landmarks | 20 points of interest + 2 river labels |
 
 ---
