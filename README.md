@@ -8,11 +8,15 @@
 
 Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
-**Try it online:** <https://radiosky-bilibili.github.io/yichang-3d/>
-&nbsp;·&nbsp; **Download:** [v1.2 **preview** — index.html, 31.6 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/index.html) — adds the new FPV river flight; still being tested
-&nbsp;·&nbsp; **Stable:** [v1.1 — index.html, 31.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.1/index.html) — the same map without the FPV flight
+**Play it now — no download needed:**
 
-*The hosted version is the stable build (`main`, no FPV flight yet) — the FPV river flight lives in the [v1.2 preview release](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2). The downloaded file is the same payload and works fully offline.*
+- **In China / on Bilibili:** [**宜昌 3D 地图 · 纸飞机飞行 · 真实体积云**](https://b23.tv/aunUQsI) — running as a Bilibili Toy (Beta), works inside the Bilibili app. Best option on a phone.
+- **Anywhere else:** <https://radiosky-bilibili.github.io/yichang-3d/> — the same map on GitHub Pages.
+
+**Download a copy:** [v1.2 — index.html, 32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) — the current stable build, fully offline once saved
+&nbsp;·&nbsp; [v1.2 preview — FPV river flight](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2-preview), still being tested
+
+*The Bilibili Toy build and the GitHub Pages build are the same map, packaged differently. The Bilibili one is the fastest way to try it on a phone in China; the interactive 3D requires WebGL 2, so an older device may struggle. The downloaded file is identical payload and works fully offline.*
 
 The map covers **63.1 × 46.3 km** of real terrain, from the Three Gorges Dam in the west to Yichang Sanxia Airport in the east, with the Yangtze cutting through the middle.
 
