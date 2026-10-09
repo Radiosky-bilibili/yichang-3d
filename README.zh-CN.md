@@ -1,12 +1,33 @@
-# 宜昌 3D 地图 — 三峡互动三维地图
+<div align="center">
+  <img src="./figures/logo.png" width="88%" alt="宜昌 3D 地图 · 3D Yichang" />
+</div>
 
-[English](./README.md) · **中文**
+<div align="center" style="line-height: 1.9;">
+  <!-- 试玩入口 -->
+  <a href="https://b23.tv/aunUQsI"><img alt="哔哩哔哩 Toy"
+    src="https://img.shields.io/badge/%F0%9F%8E%AE%20Bilibili%20Toy-立刻试玩(国内)-fb7299?color=fb7299&logoColor=white"/></a>
+  <a href="https://radiosky-bilibili.github.io/yichang-3d/"><img alt="在线演示"
+    src="https://img.shields.io/badge/%E2%96%B6%20在线演示-GitHub%20Pages-2ea44f?color=2ea44f&logoColor=white"/></a>
+  <br>
+  <!-- 技术栈 -->
+  <a href="https://threejs.org/"><img alt="three.js"
+    src="https://img.shields.io/badge/three.js-r146-black?logo=threedotjs&logoColor=white"/></a>
+  <img alt="WebGL 2" src="https://img.shields.io/badge/WebGL-2-orange?logo=webgl&logoColor=white"/>
+  <img alt="单文件" src="https://img.shields.io/badge/%E5%8D%95%E6%96%87%E4%BB%B6-32.5%20MB-blue"/>
+  <img alt="离线可用" src="https://img.shields.io/badge/%E7%A6%BB%E7%BA%BF%E5%8F%AF%E7%94%A8-%E6%98%AF-success"/>
+  <br>
+  <!-- 许可与规模 -->
+  <a href="./LICENSE"><img alt="License: MIT"
+    src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-f5de53?color=f5de53"/></a>
+  <img alt="AI 构建" src="https://img.shields.io/badge/AI%20%E6%9E%84%E5%BB%BA-%E6%98%AF-9b59b6"/>
+  <img alt="覆盖范围" src="https://img.shields.io/badge/%E8%A6%86%E7%9B%96%E8%8C%83%E5%9B%B4-63%20%C3%97%2046%20km-informational"/>
+</div>
 
-**一份单文件、可离线运行的三维地图，覆盖湖北宜昌一带的长江峡谷，完全在浏览器中运行。**
+<br>
 
-![宜昌 3D 地图 —— 三峡卫星影像](desktop-overview.jpg)
+**一个可在浏览器里完全离线运行的单文件 3D 地图 —— 覆盖长江三峡宜昌段。**
 
-所有东西都装在一个 **31 MB 的 `.html` 文件**里：渲染器、着色器、界面、卫星影像和高程模型。不需要服务器，不需要构建，不需要包管理器，下载后也**完全不需要联网**。打开文件就能起飞。
+渲染器、着色器、界面、卫星影像和高程模型全部装在这一个 **32.5 MB 的 `.html` 文件**里。不需要服务器，不需要构建，不需要包管理器；下载后也**完全不需要联网**。打开文件就能起飞。
 
 **立刻试玩 —— 无需下载：**
 
@@ -16,9 +37,28 @@
 **下载离线版：** [v1.2 —— index.html，32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) —— 当前稳定版，保存后完全离线可用
 &nbsp;·&nbsp; [v1.2 预览版 —— FPV 航线飞行](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2-preview)，仍在测试
 
-*哔哩哔哩 Toy 版和 GitHub Pages 版是同一张地图，只是打包方式不同。国内在手机上最快的方式是 B 站那份；交互式 3D 需要 WebGL 2，较老的设备可能吃力。下载的文件内容相同，保存后可以完全离线使用。*
+*哔哩哔哩 Toy 版和 GitHub Pages 版是同一张地图，只是打包方式不同。交互式 3D 需要 WebGL 2，较老的设备可能吃力。*
 
 地图覆盖 **63.1 × 46.3 公里**的真实地形，西起三峡大坝，东至宜昌三峡机场，长江从中穿过。
+
+![宜昌 3D 地图 —— 三峡卫星视图](desktop-overview.jpg)
+
+---
+
+## 目录
+
+1. [功能](#-功能)
+2. [界面展示](#-界面展示)
+3. [快速开始](#-快速开始)
+4. [操作方式](#-操作方式)
+5. [覆盖范围与数据来源](#-覆盖范围与数据来源)
+6. [技术内幕](#-技术内幕)
+7. [关于本项目](#-关于本项目)
+8. [版权、署名与许可](#-版权署名与许可)
+9. [已知限制](#-已知限制)
+10. [仓库结构](#-仓库结构)
+11. [致谢](#-致谢)
+12. [制作花絮仓库](#-制作花絮--单独的仓库)
 
 ---
 

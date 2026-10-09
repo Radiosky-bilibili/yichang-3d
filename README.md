@@ -1,12 +1,33 @@
-# 3D Yichang — an interactive 3D map of the Three Gorges
+<div align="center">
+  <img src="./figures/logo.png" width="88%" alt="宜昌 3D 地图 · 3D Yichang" />
+</div>
 
-**English** · [中文](./README.zh-CN.md)
+<div align="center" style="line-height: 1.9;">
+  <!-- 试玩入口 -->
+  <a href="https://b23.tv/aunUQsI"><img alt="哔哩哔哩 Toy"
+    src="https://img.shields.io/badge/%F0%9F%8E%AE%20Bilibili%20Toy-立刻试玩(国内)-fb7299?color=fb7299&logoColor=white"/></a>
+  <a href="https://radiosky-bilibili.github.io/yichang-3d/"><img alt="Live Demo"
+    src="https://img.shields.io/badge/%E2%96%B6%20Live%20Demo-GitHub%20Pages-2ea44f?color=2ea44f&logoColor=white"/></a>
+  <br>
+  <!-- 技术栈 -->
+  <a href="https://threejs.org/"><img alt="three.js"
+    src="https://img.shields.io/badge/three.js-r146-black?logo=threedotjs&logoColor=white"/></a>
+  <img alt="WebGL 2" src="https://img.shields.io/badge/WebGL-2-orange?logo=webgl&logoColor=white"/>
+  <img alt="Single file" src="https://img.shields.io/badge/single%20file-32.5%20MB-blue"/>
+  <img alt="Offline" src="https://img.shields.io/badge/offline-yes-success"/>
+  <br>
+  <!-- 许可与规模 -->
+  <a href="./LICENSE"><img alt="License: MIT"
+    src="https://img.shields.io/badge/License-MIT-f5de53?color=f5de53"/></a>
+  <img alt="Made with AI" src="https://img.shields.io/badge/made%20with-AI-9b59b6"/>
+  <img alt="Coverage" src="https://img.shields.io/badge/coverage-63%20%C3%97%2046%20km-informational"/>
+</div>
+
+<br>
 
 **A single-file, offline 3D map of the Yangtze valley around Yichang (Hubei, China), running entirely in the browser.**
 
-![Yichang 3D map — satellite view of the Three Gorges](desktop-overview.jpg)
-
-Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
+Everything lives inside one **32.5 MB `.html` file**: the renderer, the shaders, the interface, the satellite imagery and the elevation model. There is no server, no build step, no package manager and — once downloaded — no network access at all. Open the file and start flying.
 
 **Play it now — no download needed:**
 
@@ -16,9 +37,28 @@ Everything lives inside one **31 MB `.html` file**: the renderer, the shaders, t
 **Download a copy:** [v1.2 — index.html, 32.5 MB](https://github.com/Radiosky-bilibili/yichang-3d/releases/download/v1.2/yichang-3d-v1.2.html) — the current stable build, fully offline once saved
 &nbsp;·&nbsp; [v1.2 preview — FPV river flight](https://github.com/Radiosky-bilibili/yichang-3d/releases/tag/v1.2-preview), still being tested
 
-*The Bilibili Toy build and the GitHub Pages build are the same map, packaged differently. The Bilibili one is the fastest way to try it on a phone in China; the interactive 3D requires WebGL 2, so an older device may struggle. The downloaded file is identical payload and works fully offline.*
+*The Bilibili Toy build and the GitHub Pages build are the same map, packaged differently. The interactive 3D requires WebGL 2, so an older device may struggle.*
 
 The map covers **63.1 × 46.3 km** of real terrain, from the Three Gorges Dam in the west to Yichang Sanxia Airport in the east, with the Yangtze cutting through the middle.
+
+![Yichang 3D map — satellite view of the Three Gorges](desktop-overview.jpg)
+
+---
+
+## Table of Contents
+
+1. [Features](#-features)
+2. [Gallery](#-gallery)
+3. [Quick start](#-quick-start)
+4. [Controls](#-controls)
+5. [Coverage and data sources](#-coverage-and-data-sources)
+6. [Under the hood](#-under-the-hood)
+7. [About this project](#-about-this-project)
+8. [Copyright, attribution and licensing](#-copyright-attribution-and-licensing)
+9. [Known limitations](#-known-limitations)
+10. [Repository layout](#-repository-layout)
+11. [Credits & thanks](#-credits--thanks)
+12. [How it was made — the making-of repository](#-how-it-was-made--the-making-of-repository)
 
 ---
 
